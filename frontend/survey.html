@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>Building Damage Detection</title>
+  </head>
+  <body>
+    <h1>Building Damage Detection</h1>
+    <form id="myForm" enctype="multipart/form-data">
+      <input type="file" id="input">
+      <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
 
-<head>
-    <title>Survey</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="surveyStyle.css" />
-</head>
+    <h2>Output Image:</h2>
+    <img src="your_output_image_path.jpg" />
 
-<body>
-    <div class="header">
-        <div class="navigation-links">
-            <div><a href="home.html">Home</a></div>
-            <div><a href="hurricanesurvey.html">Damage Survey</a></div>
-        </div>
-    </div>
-    <div class="container">
-        <form id="myForm" enctype="multipart/form-data">
-            <input type="file" id="input">
-            <button type="button" onclick="uploadFile()">Upload</button>
-        </form>
-        <script>
+    <script>
+      function uploadFile() {
+        var fileInput = document.getElementById("input");
+        var file = fileInput.files[0];
+        var formData = new FormData();
+        formData.append("file", file);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/upload", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("output-img").src = "/static/out.png";
+            document.getElementById("output-img").style.display = "block";
+          }
+        };
+        xhr.send(formData);
+      }
+    </script>
+  </body>
+</html>
+
+
+        <!-- <script>
             var fileInput = document.getElementByID("input")
             var file = fileInput.files[0];
             var formData = new FormData();
@@ -77,8 +89,5 @@
             }
 
 
-        </script>
-    </div>
-</body>
-
-</html>
+        </script> -->
+ 
