@@ -1,6 +1,6 @@
 
 body {
-    background-color: #013A6B;
+    background-color: #f3e9e2;
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 #title {
     align-items: center;
     font-size: 50px;
-    color: white;
+    color: #3E4135;
     font-family: Tahoma, sans-serif;
     width: 100%;
     text-align: center;  
@@ -24,7 +24,7 @@ body {
 h1 {
     align-items: center;
     font-size: 38px;
-    color: white;
+    color: #3E4135    ;
     font-family: Tahoma, sans-serif;
     width: 100%;
     text-align: center;  
@@ -54,8 +54,79 @@ p {
 .navigation-links > div > a { /*specifies styling for text*/
     text-align: right; 
     text-decoration: none;
-    color: black;
+    color: #f3e9e2;
     font-family: Tahoma, sans-serif;
     font-size: 30px;
+}
+
+.earth {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 95px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  }
+  
+  .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+  }
+  
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 25s linear alternate infinite;
+    background: url(https://www.firstrealtyrentals.com/wp-content/uploads/2013/01/World-flat-map.jpg);
+    background-size: cover;
+  }
+
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 26vw;
+  }
+  
+  .buttons a {
+    background-color: #E2D7B8;
+    color:  #AA965B;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: Calibri;
+  }
+  
+  .buttons a:hover {
+    background-color: #9FA081;
+    color: #6B664B;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
 }
 

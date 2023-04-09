@@ -1,0 +1,34 @@
+
+body {
+    background-color: #013A6B;
+}
+
+
+.navigation-links {
+    display: flex; /*flexbox for navigation links*/
+    flex-direction: row;
+    top: 8px;
+    position: relative;
+    float: right; /*positioned on top right of page*/
+}
+
+.navigation-links > div {
+    /*specifies spacing between flexbox elements*/
+    margin: 1vw; 
+    padding: 14px 16px;
+    color: black;
+}
+
+.navigation-links > div > a { /*specifies styling for text*/
+    text-align: right; 
+    text-decoration: none;
+    color: #f3e9e2;
+    font-family: Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+.container {
+    align-items: left;
+    top: 35vh;
+    position: relative;
+}

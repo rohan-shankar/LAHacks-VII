@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="surveyStyle.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="navigation-links">
+            <div><a href="home.html">Home</a></div>
+            <div><a href="hurricanesurvey.html">Damage Survey</a></div>
+        </div>
+    </div>
+    <div class="container">
+        <form id="myForm" enctype="multipart/form-data">
+            <input type="file" id="input">
+            <button type="button" onclick="uploadFile()">Upload</button>
+        </form>
+        <script>
+            var fileInput = document.getElementByID("input")
+            var file = fileInput.files[0];
+            var formData = new FormData();
+            formData.append("file", file);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/74.207.251.96:5002", true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    console.log(xhr.responseText);
+                } else {
+                    console.log("Error:", xhr.statusText);
+                }
+            };
+            xhr.send(formData);
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response data
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+        </script>
+    </div>
+</body>
+
+</html>

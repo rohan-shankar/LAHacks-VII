@@ -2,37 +2,46 @@
 <html lang="en">
 
 <head>
-  <title>DamageMapper</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- import the webpage's stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+    <title>DamageMapper</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="header"> 
-    <div class="navigation-links">
-      <div><a href="home.html">Home</a></div>
-      <div><a href="about.html">About</a></div>
+    <div class="header">
+        <div class="navigation-links">
+            <div><a href="home.html">Home</a></div>
+            <div><a href="survey.html">Damage Survey</a></div>
+        </div>
     </div>
-</div>
-      <div class = "title">
-      </div>
-      <div class = "container">
-        <h1 id = "title">Name Here</h1>
-        <h1><span class = "auto-type"></span></h1>
+    <div class="title"></div>
+   <div class="earth">
+        <div></div> 
+    </div> 
+    <div class="container">
+        <h1 id="title">Survey Sense</h1>            
+        <h1><span class="auto-type"></span></h1>
         <p></p>
-        <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
-          var typed = new Typed(".auto-type", {
-            strings: ["Revolutionizing Disaster Assessment.", "Expediting Response Times.", "Saving Lives."],
-            typeSpeed: 125,
-            backSpeed: 100,
-            loop: true
-          })
+            var typed = new Typed(".auto-type", {
+                strings: ["Revolutionizing Disaster Assessment.", "Expediting Response Times.", "Saving Lives."],
+                typeSpeed: 125,
+                backSpeed: 100,
+                loop: true
+            })
         </script>
-      </div>
+
+        <div class="buttons">
+            <!-- buttons -->
+            <a href="kepler.gl.html" target="_blank" class="buttons">Get Started</a>
+            <a href="" target="survey.html" class="buttons">Binary Classification</a>
+            <a href="" target="_blank" class="buttons">Land Use Classification</a>
+        </div>
+    </div>
 </body>
 
 </html>
