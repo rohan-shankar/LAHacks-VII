@@ -1,6 +1,6 @@
 
 body {
-    background-color: #f3e9e2;
+    background-color: #abb395;
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 #title {
     align-items: center;
     font-size: 50px;
-    color: #3E4135;
+    color: #E2D7B8;
     font-family: Tahoma, sans-serif;
     width: 100%;
     text-align: center;  
@@ -24,7 +24,7 @@ body {
 h1 {
     align-items: center;
     font-size: 38px;
-    color: #3E4135    ;
+    color: #E2D7B8    ;
     font-family: Tahoma, sans-serif;
     width: 100%;
     text-align: center;  
@@ -54,7 +54,7 @@ p {
 .navigation-links > div > a { /*specifies styling for text*/
     text-align: right; 
     text-decoration: none;
-    color: #f3e9e2;
+    color: #abb395;
     font-family: Tahoma, sans-serif;
     font-size: 30px;
 }
@@ -70,7 +70,7 @@ p {
     margin: auto;
     overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+    box-shadow: 0 0 20px 20px #36382f inset, 0 0 20px 2px #36382f;
   }
   
   .earth:after {
@@ -80,15 +80,15 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: -20px -20px 50px 2px #000 inset;
+    box-shadow: -20px -20px 50px 2px #262722 inset;
     border-radius: 50%;
   }
   
   .earth > div {
     width: 200%;
     height: 100%;
-    animation: spin 25s linear alternate infinite;
-    background: url(https://www.firstrealtyrentals.com/wp-content/uploads/2013/01/World-flat-map.jpg);
+    animation: spin 15s linear alternate infinite;
+    background: url(https://cdn.discordapp.com/attachments/1094350370874065017/1094608881734397952/map_final.jpg);
     background-size: cover;
   }
 

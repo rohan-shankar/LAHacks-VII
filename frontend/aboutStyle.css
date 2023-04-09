@@ -1,0 +1,83 @@
+body {
+    background-color: #f3e9e2;
+}
+
+h1 {
+    align-items: center;
+    font-size: 38px;
+    color: #3E4135    ;
+    font-family: Tahoma, sans-serif;
+    width: 100%;
+    text-align: center;  
+}
+
+h3 {
+    align-items: center;
+    font-size: 26px;
+    color: #3E4135    ;
+    font-family: Tahoma, sans-serif;
+    width: 100%;
+    text-align: center;  
+}
+
+p {
+    align-items: left;
+    font-size: 20px;
+    color: #3E4135    ;
+    font-family: Tahoma, sans-serif;
+    width: 100%;
+    text-align: left;  
+    font-weight: bold;
+}
+
+#special_p {
+    font-size: 16px;
+    color: #3E4135    ;
+    font-family: Tahoma, sans-serif;
+    width: 100%;
+    text-align: left;  
+    font-weight: normal;
+}
+
+li {
+    align-items: left;
+    font-size: 16px;
+    color: #3E4135    ;
+    font-family: Tahoma, sans-serif;
+    width: 100%;
+    font-weight: normal;
+    text-align: left;  
+}
+
+ul {
+    list-style-image: url('https://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/16/globe-icon.png');  
+    color: #abb395 /*Pink*/
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-box {
+    text-align: center;
+    margin: 10px;
+  }
+  
+
+  #before {
+    transform: scale(1.2)
+  }
+
+  #lulac1 {
+        max-width: 50%;
+        float: center;
+  }
+
+  
+  #lulac2 {
+    max-width: 50%;
+    float: center;
+}

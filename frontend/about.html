@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="aboutStyle.css" />
+</head>
+
+<body>
+    <h1>Deep Learning Models</h1>
+    <h3>Natural Disaster Damage Assessment</h3>
+    <p>Process</p>
+    <ul>
+        <li>Utilized a dataset of 10,000 aerial images depicting individual homes and other structures affected by
+            Hurricane Harvey to train a Convolutional Neural Network (CNN)</li>
+        <li>Applied the trained CNN model to larger scale images that contained multiple structures</li>
+        <li>Integrated the machine learning model with a web application, enabling real-time classification of new
+            imagery for disaster assessment purposes.</li>
+    </ul>
+    <p>Impact</p>
+    <ul>
+        <li>Enables first responders to quickly and accurately assess the damage caused by hurricanes and other natural
+            disasters (as opposted to manually labelling data)</li>
+        <li>Improves the overall effectiveness of disaster response efforts, potentially saving lives and reducing
+            property damage</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <div class="image-container">
+            <div class="image-box">
+                <figure>
+                    <img src="before_image.png" id = "before" alt="Image 1">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <figcaption>
+                        Aransas Pass Before Hurricane Harvey (20 Intact, 1 Damaged)
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="image-box">
+                <figure>
+                    <img src="Aransas Pass After Harvey.png" alt="Image 2">
+                    <figcaption>Aransas Pass After Hurricane Harvey (Same Site, 0 Intact, 22 Damaged)</figcaption>
+                </figure>
+            </div>
+        </div>
+
+            <h3>Land Use and Cover Map Generation</h3>
+            <p>Process</p>
+            <ul>
+                <li>The LULC identification model was trained on satellite imagery sourced from EuroSAT and Google Earth
+                    Engine, using RGB image classification. The result was a model which allows the user to request
+                    satellite images from certain regions, segment the image into 64x64 chunks, and use the LULC model
+                    to accurately label them.</li>
+                <li>A GeoJSON file is returned with the predicted labels, which is then visualized using kepler.gl.</li>
+            </ul>
+            <p>Impact</p>
+            <ul>
+                <li>In combination with the LULC maps, the two models allow for a user-friendly view of land usage in
+                    order to assess risk and potential improvements for future urban development.</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <img src="lulac1.png" id = "lulac1" alt="Image 1">
+            <p id = "special_p">Aransas and Refugio County --  The Two Counties Most Affected by Hurricane Harvey            </p>
+            <br>
+            <br>
+            <img src = "lulac2.png" id = "lulac2" alt = "Image 2">
+            <p id = "special_p">Santa Clara - Where We Are! </p>
+            
+
+       
+</body>
+
+</html>

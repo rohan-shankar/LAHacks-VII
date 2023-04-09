@@ -1,8 +1,7 @@
 
 body {
-    background-color: #013A6B;
+    background-color: #abb395;
 }
-
 
 .navigation-links {
     display: flex; /*flexbox for navigation links*/
@@ -22,7 +21,7 @@ body {
 .navigation-links > div > a { /*specifies styling for text*/
     text-align: right; 
     text-decoration: none;
-    color: #f3e9e2;
+    color: #abb395;
     font-family: Tahoma, sans-serif;
     font-size: 30px;
 }
