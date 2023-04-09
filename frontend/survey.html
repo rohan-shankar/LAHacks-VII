@@ -30,24 +30,52 @@
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "/74.207.251.96:5002", true);
             xhr.onload = function () {
-                if (xhr.status === 200) {
+                if (xhr.status === 201) {
                     console.log(xhr.responseText);
+                    let getRequest = XMLHttpRequest();
+                    getRequest.open("GET", "/74.207.251.96:5002", true);
+                    getRequest.responseType = "blob";
+                    getRequest.onload = function () {
+                        if (getRequest.status() == 200) {
+                            var b = new Blob([getRequest.response], { type: 'image/png' });
+                            downloadBlob(b, "image.png");
+                        }
+                    }
                 } else {
                     console.log("Error:", xhr.statusText);
                 }
             };
             xhr.send(formData);
-            fetch('/upload', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Handle the response data
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+            //POST done
+
+            function downloadBlob(blob, name = 'file.txt') {
+                // Convert your blob into a Blob URL (a special url that points to an object in the browser's memory)
+                const blobUrl = URL.createObjectURL(blob);
+
+                // Create a link element
+                const link = document.createElement("a");
+
+                // Set link's href to point to the Blob URL
+                link.href = blobUrl;
+                link.download = name;
+
+                // Append link to the body
+                document.body.appendChild(link);
+
+                // Dispatch click event on the link
+                // This is necessary as link.click() does not work on the latest firefox
+                link.dispatchEvent(
+                    new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window
+                    })
+                );
+
+                // Remove link from body
+                document.body.removeChild(link);
+            }
+
 
         </script>
     </div>
